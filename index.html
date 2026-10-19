@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZBE Power Engineering — Electrical &amp; ICT, Addis Ababa</title>
+<meta name="description" content="Electrical installation systems, ICT infrastructure, PCB design and prototyping in Addis Ababa, Ethiopia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="cursor" aria-hidden="true"></div>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="hero__left">
+    <div class="topbar">
+      <a href="#top" class="logo" aria-label="ZBE Power Engineering"><img src="assets/zbe/logos/zbe-logo.jpg" alt="ZBE Power Engineering"></a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#gallery">Gallery</a>
+        <a href="#clients">Clients</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+
+    <div class="hero__body">
+      <p class="eyebrow mono">Featured work <span id="hero-count">01/04</span></p>
+      <h1 class="display" id="hero-title">Smart Banking Branch</h1>
+      <p class="lead">Electrical installation systems and ICT infrastructure: reliable, state-of-the-art solutions tailored to your needs.</p>
+      <p class="mono meta">ZBE Power Engineering · Addis Ababa, Ethiopia</p>
+      <div class="hero__cta">
+        <a href="#gallery" class="btn">View our work <span aria-hidden="true">→</span></a>
+        <a href="#contact" class="btn btn--ghost">Get a quote</a>
+      </div>
+    </div>
+
+    <figure class="hero__feature" id="hero-feature">
+      <img id="hero-img" src="assets/zbe/photos/p1.jpg" alt="">
+      <figcaption class="badge"><b>24/7</b><small>emergency support</small></figcaption>
+    </figure>
+    <div class="progress" aria-hidden="true"><i id="hero-progress"></i></div>
+  </div>
+
+  <aside class="hero__wall" aria-hidden="true">
+    <div class="wall-col" id="wall-a"></div>
+    <div class="wall-col wall-col--rev" id="wall-b"></div>
+  </aside>
+</header>
+
+<main>
+<!-- ============ GALLERY ============ -->
+<section class="section" id="gallery">
+  <div class="section__head">
+    <p class="eyebrow mono">01 — Selected work</p>
+    <h2 class="display display--xl">Our work</h2>
+  </div>
+  <div class="masonry" id="masonry"></div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="section section--light" id="services">
+  <div class="section__head">
+    <p class="eyebrow mono">02 — Services</p>
+    <h2 class="display display--xl">What we do</h2>
+  </div>
+  <div class="services">
+    <ol class="services__list" id="services-list"></ol>
+    <div class="services__preview" aria-hidden="true">
+      <img id="svc-img" src="assets/zbe/photos/p1.jpg" alt="">
+      <span class="mono">Selected work</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLIENTS ============ -->
+<section class="section" id="clients">
+  <div class="section__head">
+    <p class="eyebrow mono">03 — Clients</p>
+    <h2 class="display display--xl">Trusted by</h2>
+  </div>
+
+  <ul class="logos" id="logos"></ul>
+
+  <h3 class="group-title mono">Testimonials</h3>
+  <div class="quotes" id="quotes"></div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" id="contact">
+  <div class="footer__cta">
+    <h2 class="display display--xl">Ready to power up<br>your projects?</h2>
+    <a class="btn btn--lg" href="mailto:sales@zbepowereng.com">Get a quote <span aria-hidden="true">→</span></a>
+  </div>
+  <div class="footer__grid">
+    <div>
+      <a href="#top" class="logo" aria-label="ZBE Power Engineering"><img src="assets/zbe/logos/zbe-logo.jpg" alt="ZBE Power Engineering"></a>
+      <p class="muted">We specialize in electrical installation systems and ICT infrastructure. With a commitment to innovation and quality, we deliver state-of-the-art solutions tailored to your needs.</p>
+    </div>
+    <div class="mono">
+      <p class="muted">Navigate</p>
+      <a href="#gallery">Gallery</a><a href="#services">Services</a><a href="#clients">Clients</a>
+    </div>
+    <div class="mono">
+      <p class="muted">Contact</p>
+      <span>Addis Ababa, Ethiopia</span>
+      <span>Bole Sub City</span>
+      <a href="tel:+251911488066">+251 911 488 066</a>
+      <a href="tel:+251988488066">+251 988 488 066</a>
+      <a href="mailto:sales@zbepowereng.com">sales@zbepowereng.com</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ CASE STUDY MODAL ============ -->
+<dialog class="case" id="case">
+  <button class="case__close mono" id="case-close" aria-label="Close">Close ✕</button>
+  <h2 class="display display--xl case__title" id="case-title"></h2>
+  <div class="case__grid">
+    <img id="case-img" alt="">
+    <div>
+      <p class="case__lead">ZBE Power Engineering — electrical installation systems and ICT infrastructure, Addis Ababa.</p>
+      <a class="btn" href="#contact" id="case-cta">Discuss a similar project <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
