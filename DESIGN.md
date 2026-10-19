@@ -159,3 +159,10 @@ Colors, photos, logos and copy now come from https://zbepowereng.com:
 - Services, testimonials and contact details are the site's own text.
 - The site has no sponsors list, only "Trusted by"; all logos are shown as clients.
 - Gallery titles are descriptions of the photos and should be confirmed by the company.
+
+## 8. Next.js + Tailwind (current)
+The site is a Next.js App Router project styled with Tailwind CSS v4.
+- Design tokens live in `@theme` in `src/app/globals.css` (colors `brand`, `brand-deep`, `warm`, `panel`, `tint`, `ink`, `muted`; radii `panel` / `card`; fonts mapped from `next/font`).
+- Layout and spacing are utility classes in the components; `globals.css` only holds the keyframes and a few primitives (`.btn`, `.btn-ghost`, `.mono`, `.display`, `.reveal`, `.bg-grid`).
+- Desktop layout starts at `lg` = 900px and the wide logo grid at `xl` = 1100px (defined in rem so Tailwind sorts them correctly).
+- Hero state (swapping / offscreen / paused) is exposed as `data-*` attributes on the header and styled with `group-data-*` variants.

@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+/* ZBE brand: blue #007ACC (site primary), orange #F58220 (site secondary) */
+@theme {
+  --color-panel: #f5f9ff;
+  --color-line: #dbe6f2;
+  --color-ink: #0f1f2e;
+  --color-muted: #5b6b7a;
+  --color-soft: #3b4f63;
+  --color-brand: #007acc;       /* fills, and accent text on white (4.6:1) */
+  --color-brand-deep: #005c99;
+  --color-warm: #f58220;
+  --color-tint: #eaf3fb;
+  --color-tint-line: #c8dcef;
+
+  --radius-panel: 32px;
+  --radius-card: 18px;
+  --ease-soft: cubic-bezier(0.22, 0.8, 0.24, 1);
+
+  /* desktop layout starts at 900px, wide logo grid at 1100px */
+  --breakpoint-lg: 56.25rem; /* 900px (rem, so Tailwind sorts it against the default sm/md) */
+  --breakpoint-xl: 68.75rem; /* 1100px */
+
+  --animate-scroll-up: scroll-up 60s linear infinite;
+  --animate-scroll-down: scroll-down 75s linear infinite;
+  --animate-fill: fill 4200ms linear forwards; /* hero rotation timer (4.2s) */
+  --animate-fade-in: fade-in 0.35s var(--ease-soft);
+  --animate-pop: pop 0.45s var(--ease-soft);
+}
+
+/* next/font exposes --nf-*; map them to Tailwind's font utilities */
+@theme inline {
+  --font-display: var(--nf-display), system-ui, sans-serif;
+  --font-body: var(--nf-body), system-ui, sans-serif;
+  --font-mono: var(--nf-mono), ui-monospace, monospace;
+}
+
+@keyframes fill { to { width: 100%; } }
+/* three copies per wall column: shift by exactly one copy */
+@keyframes scroll-up { to { transform: translateY(-33.3333%); } }
+@keyframes scroll-down { from { transform: translateY(0); } to { transform: translateY(33.3333%); } }
+@keyframes fade-in { from { opacity: 0; } }
+@keyframes pop { from { opacity: 0; transform: translateY(24px) scale(0.98); } }
+@keyframes reveal { from { opacity: 0; translate: 0 26px; } }
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 12px; }
+  html:has(dialog[open]) { overflow: hidden; }
+  body {
+    background: #fff;
+    color: var(--color-ink);
+    font: 300 16px/1.55 var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  button { cursor: pointer; }
+  address { font-style: normal; }
+  :focus-visible { outline: 2px solid var(--color-brand); outline-offset: 3px; border-radius: 4px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition-duration: 0.01ms !important; }
+  }
+}
+
+/* Small repeated primitives. Utilities in the markup still override these. */
+@layer components {
+  .mono { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; }
+  .display { font-family: var(--font-display); font-weight: 700; line-height: 0.98; letter-spacing: -0.02em; }
+  .display-xl { font-size: clamp(48px, 9vw, 132px); }
+
+  .btn {
+    @apply inline-flex items-center gap-2.5 rounded-full bg-brand px-[22px] py-3.5 font-body text-sm font-medium text-white
+      transition-[transform,box-shadow,background-color] duration-300 ease-soft
+      hover:-translate-y-0.5 hover:bg-brand-deep hover:shadow-[0_10px_30px_-10px_var(--color-brand)];
+  }
+  .btn-ghost {
+    @apply bg-transparent text-ink shadow-[inset_0_0_0_1px_var(--color-line)]
+      hover:bg-transparent hover:shadow-[inset_0_0_0_1px_var(--color-brand)];
+  }
+
+  /* Scroll reveal: pure CSS, content stays visible without JS or without support */
+  .reveal {
+    @supports (animation-timeline: view()) {
+      animation: reveal linear backwards;
+      animation-timeline: view();
+      animation-range: entry 0% entry 45%;
+    }
+    @media (prefers-reduced-motion: reduce) { animation: none; }
+  }
+
+  /* Blueprint grid behind the hero */
+  .bg-grid {
+    background-image:
+      linear-gradient(var(--color-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-line) 1px, transparent 1px);
+    background-size: 64px 64px;
+    background-position: -1px -1px;
+  }
+}
