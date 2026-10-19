@@ -29,13 +29,13 @@ export default function Footer() {
             quality, we deliver state-of-the-art solutions tailored to your needs.
           </p>
         </div>
-        <nav aria-label="Footer" className={`${col} font-mono text-[13px]`}>
+        <nav aria-label="Footer" className={`${col} font-mono text-[13px] pointer-coarse:gap-0 pointer-coarse:[&_a]:py-3`}>
           <p className={label}>Navigate</p>
           <a href="#gallery">Gallery</a>
           <a href="#services">Services</a>
           <a href="#clients">Clients</a>
         </nav>
-        <address className={`${col} font-mono text-[13px]`}>
+        <address className={`${col} font-mono text-[13px] pointer-coarse:gap-0 pointer-coarse:[&_a]:py-3`}>
           <p className={label}>Contact</p>
           <span>{SITE.address.city}, {SITE.address.country}</span>
           <span>{SITE.address.street}</span>

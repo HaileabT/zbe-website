@@ -40,7 +40,7 @@ export default function Gallery() {
               View project →
             </span>
             <span className="absolute inset-x-4 bottom-3.5 z-[1] flex flex-col gap-2">
-              <span className="font-display text-xl leading-[1.1] font-bold tracking-[-.01em]">{p.title}</span>
+              <span className="font-display text-xl leading-[1.1] font-bold tracking-normal">{p.title}</span>
             </span>
           </button>
         ))}

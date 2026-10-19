@@ -27,7 +27,7 @@ export default function Clients() {
             <span aria-hidden="true" className="absolute -top-1.5 right-[18px] font-display text-[120px] leading-none font-bold text-brand/[.16]">
               &quot;
             </span>
-            <h4 className="mb-3 max-w-[80%] font-display text-xl leading-[1.2] font-bold tracking-[-.01em] text-brand-deep">{t.title}</h4>
+            <h4 className="mb-3 max-w-[80%] font-display text-xl leading-[1.2] font-bold tracking-normal text-brand-deep">{t.title}</h4>
             <blockquote className="text-soft">{t.text}</blockquote>
           </figure>
         ))}

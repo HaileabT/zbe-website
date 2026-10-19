@@ -42,14 +42,17 @@ export const FEATURED = [0, 4, 5, 2] as const;
 export const WALL_A = [0, 2, 4] as const;
 export const WALL_B = [1, 3, 5] as const;
 
-export const SERVICES = [
+export type Service = { title: string; text: string };
+
+/** The six services, same order and descriptions as the live site. */
+export const SERVICES: Service[] = [
   { title: "Comprehensive Electrical Solutions", text: "A full spectrum of services for your electrical needs, from installation to maintenance." },
   { title: "Custom PCB Design and Manufacturing", text: "Tailored electronic designs created to meet specific client requirements, delivered with our advanced manufacturing process." },
   { title: "ICT Infrastructure Development", text: "Expertise in building and developing robust ICT infrastructure for diverse applications." },
   { title: "Prototyping Services", text: "End-to-end prototyping and testing in our state-of-the-art electronics laboratory." },
   { title: "Consultation and Assessment", text: "Thorough assessments and consultations to ensure all electrical installations meet safety and efficiency standards." },
   { title: "24/7 Emergency Support", text: "Reliable emergency support for electrical issues at any time, ensuring your safety and peace of mind." },
-] as const;
+];
 
 export const CLIENTS: { name: string; logo: StaticImageData }[] = [
   { name: "Dashen Bank", logo: dashen },

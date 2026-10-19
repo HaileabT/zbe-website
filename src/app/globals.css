@@ -9,7 +9,7 @@
   --color-soft: #3b4f63;
   --color-brand: #007acc;       /* fills, and accent text on white (4.6:1) */
   --color-brand-deep: #005c99;
-  --color-warm: #f58220;
+  --color-warm: #FECDAA;
   --color-tint: #eaf3fb;
   --color-tint-line: #c8dcef;
 
@@ -66,8 +66,8 @@
 /* Small repeated primitives. Utilities in the markup still override these. */
 @layer components {
   .mono { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; }
-  .display { font-family: var(--font-display); font-weight: 700; line-height: 0.98; letter-spacing: -0.02em; }
-  .display-xl { font-size: clamp(48px, 9vw, 132px); }
+  .display { font-family: var(--font-display); font-weight: 700; line-height: 0.98; letter-spacing: -0.01em; }
+  .display-xl { font-size: clamp(48px, 9vw, 132px); letter-spacing: 0.01em; }
 
   .btn {
     @apply inline-flex items-center gap-2.5 rounded-full bg-brand px-[22px] py-3.5 font-body text-sm font-medium text-white

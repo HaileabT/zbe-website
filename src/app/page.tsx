@@ -47,7 +47,6 @@ export default function Home() {
       <main id="main" className="px-2 lg:px-3.5">
         <section className="px-[clamp(8px,2vw,28px)] pt-[clamp(72px,10vw,150px)] pb-10" id="gallery" aria-labelledby="gallery-title">
           <div className="reveal mb-[clamp(28px,4vw,56px)]">
-            <p className="mono mb-[18px] text-brand">01 — Selected work</p>
             <h2 id="gallery-title" className="display display-xl">Our work</h2>
           </div>
           <Gallery />
@@ -55,7 +54,6 @@ export default function Home() {
 
         <section className="mt-[60px] rounded-panel bg-tint px-[clamp(20px,4vw,56px)] pt-[clamp(72px,10vw,150px)] pb-[clamp(60px,8vw,120px)]" id="services" aria-labelledby="services-title">
           <div className="reveal mb-[clamp(28px,4vw,56px)]">
-            <p className="mono mb-[18px] text-brand">02 — Services</p>
             <h2 id="services-title" className="display display-xl">What we do</h2>
           </div>
           <Services />
@@ -63,7 +61,6 @@ export default function Home() {
 
         <section className="content-auto px-[clamp(8px,2vw,28px)] pt-[clamp(72px,10vw,150px)] pb-10 [contain-intrinsic-size:auto_1500px]" id="clients" aria-labelledby="clients-title">
           <div className="reveal mb-[clamp(28px,4vw,56px)]">
-            <p className="mono mb-[18px] text-brand">03 — Clients</p>
             <h2 id="clients-title" className="display display-xl">Trusted by</h2>
           </div>
           <Clients />

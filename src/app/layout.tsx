@@ -1,12 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
+import { Bricolage_Grotesque, Geist_Mono, Hanken_Grotesk } from "next/font/google";
 import { SITE } from "@/data/content";
 import "./globals.css";
 
 // Self-hosted variable fonts (no render-blocking request to Google at runtime).
-const display = Space_Grotesk({ subsets: ["latin"], variable: "--nf-display", display: "swap" });
-const body = Inter({ subsets: ["latin"], variable: "--nf-body", display: "swap" });
-const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--nf-mono", display: "swap", preload: false });
+const display = Bricolage_Grotesque({ subsets: ["latin"], axes: ["opsz"], variable: "--nf-display", display: "swap" });
+const body = Hanken_Grotesk({ subsets: ["latin"], variable: "--nf-body", display: "swap" });
+const mono = Geist_Mono({ subsets: ["latin"], variable: "--nf-mono", display: "swap", preload: false });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
